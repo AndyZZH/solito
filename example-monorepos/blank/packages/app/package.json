@@ -8,6 +8,7 @@
     "dripsy": "^3.6.0",
     "expo-linking": "^3.0.0",
     "moti": "canary",
+    "react-native-paper": "^4.12.4",
     "solito": "latest"
   },
   "sideEffects": false

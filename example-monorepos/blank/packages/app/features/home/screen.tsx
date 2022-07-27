@@ -2,6 +2,7 @@ import { Text, useSx, View, H1, P, Row, A } from 'dripsy'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { Button } from 'react-native-paper';
 
 export function HomeScreen() {
   const sx = useSx()
@@ -10,6 +11,9 @@ export function HomeScreen() {
     <View
       sx={{ flex: 1, justifyContent: 'center', alignItems: 'center', p: 16 }}
     >
+      <Button icon="camera" mode="contained" onPress={() => {}}>
+        Press me
+      </Button>
       <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1>
       <View sx={{ maxWidth: 600 }}>
         <P sx={{ textAlign: 'center' }}>
