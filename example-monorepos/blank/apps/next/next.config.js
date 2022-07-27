@@ -1,22 +1,12 @@
 /** @type {import('next').NextConfig} */
-
-const path = require('path')
-
 const nextConfig = {
   reactStrictMode: true,
   webpack5: true,
-  webpack: (config, options) => {
-    config.module.rules.push({
-      test: /\.ttf$/,
-      loader: "url-loader", // or directly file-loader
-      include: path.resolve(__dirname, "../../node_modules/@expo/vector-icons"),
-    })
-    return config
-  }
 }
 
 const { withExpo } = require('@expo/next-adapter')
-const withFonts = require("next-fonts");
+const withFonts = require('next-fonts')
+const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
 const withTM = require('next-transpile-modules')([
   'solito',
@@ -25,14 +15,11 @@ const withTM = require('next-transpile-modules')([
   'moti',
   '@motify/core',
   '@motify/components',
-  'react-native-svg',
   'native-base',
   'app',
 ])
 
 module.exports = withPlugins(
-  [withTM, 
-  [withFonts, { projectRoot: __dirname }],
-  [withExpo, { projectRoot: __dirname }]],
+  [withTM, withFonts, withImages, [withExpo, { projectRoot: __dirname }]],
   nextConfig
 )
