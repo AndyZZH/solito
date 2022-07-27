@@ -25,6 +25,8 @@ const withTM = require('next-transpile-modules')([
   'moti',
   '@motify/core',
   '@motify/components',
+  'react-native-svg',
+  'native-base',
   'app',
 ])
 

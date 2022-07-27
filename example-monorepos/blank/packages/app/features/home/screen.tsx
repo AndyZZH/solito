@@ -2,7 +2,8 @@ import { Text, useSx, View, H1, P, Row, A } from 'dripsy'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { Box } from "native-base";
+import AntDesign from '@expo/vector-icons/AntDesign';
+import { Box, Icon } from "native-base";
 
 export function HomeScreen() {
   const sx = useSx()
@@ -12,6 +13,9 @@ export function HomeScreen() {
       sx={{ flex: 1, justifyContent: 'center', alignItems: 'center', p: 16 }}
     >
       <Box>Hello Native Base</Box>
+      <Icon as={AntDesign} name="android1" color="coolGray.800" _dark={{
+        color: "warmGray.50"
+      }} />
       <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1>
       <View sx={{ maxWidth: 600 }}>
         <P sx={{ textAlign: 'center' }}>
