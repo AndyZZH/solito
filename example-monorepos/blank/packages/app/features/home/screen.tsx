@@ -5,20 +5,23 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
 import HoverPulse from '../list/pulse';
 import Swipeable from '../list/swipeable-list';
+import DragAndDrop from '../list/dragndrop';
 
 export function HomeScreen() {
   const sx = useSx()
 
   return (
-    <View
-      sx={{ flex: 1, justifyContent: 'center', alignItems: 'center', p: 16 }}
-    >
-      <HoverPulse style={{}}>
-        <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1>
-      </HoverPulse>
-      <Swipeable style={{}}>
-        <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1>
-      </Swipeable>
-    </View>
+    // <View
+    //   sx={{ flex: 1, justifyContent: 'center', alignItems: 'center', p: 16 }}
+    // >
+    //   <HoverPulse style={{}}>
+    //     <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1>
+    //   </HoverPulse>
+    //   <Swipeable style={{}}>
+    //     <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1>
+    //   </Swipeable>
+    //   <DragAndDrop></DragAndDrop>
+    // </View>
+    <DragAndDrop></DragAndDrop>
   )
 }
